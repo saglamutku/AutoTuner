@@ -1,0 +1,27 @@
+From 33c0e9daed4c485ce72cb46c0864400a862d2b68 Mon Sep 17 00:00:00 2001
+From: utkusaglam <saglmutku@gmail.com>
+Date: Thu, 24 Jul 2025 11:50:49 +0200
+Subject: [PATCH 1/2] activate configs.pkl
+
+---
+ tuner/tuner/candidate_gen.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tuner/tuner/candidate_gen.py b/tuner/tuner/candidate_gen.py
+index 9fe119c..3c9d7d7 100644
+--- a/tuner/tuner/candidate_gen.py
++++ b/tuner/tuner/candidate_gen.py
+@@ -534,8 +534,8 @@ def tune(
+                 f.write(tf_mlir.embeddable)
+ 
+         # TODO: Fix pickling for ir types.
+-        # with open(path.join(output, "configs.pkl"), "wb") as file:
+-        #    pickle.dump(configs, file)
++        with open(path.join(output, "configs.pkl"), "wb") as file:
++           pickle.dump(configs, file)
+ 
+         tune_logger.info(f"Generated {len(configs)} candidates")
+         tune_logger.info(f"Configurations .pkl is stored in {output}/configs.pkl")
+-- 
+2.39.5 (Apple Git-154)
+

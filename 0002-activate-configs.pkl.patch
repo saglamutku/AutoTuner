@@ -1,0 +1,25 @@
+From a96e87751c86ff67a81bea23d0b6b280fddc67ce Mon Sep 17 00:00:00 2001
+From: utkusaglam <saglmutku@gmail.com>
+Date: Thu, 24 Jul 2025 11:58:19 +0200
+Subject: [PATCH 2/2] activate configs.pkl
+
+---
+ tuner/examples/dispatch_cpu/dispatch_tuner.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tuner/examples/dispatch_cpu/dispatch_tuner.py b/tuner/examples/dispatch_cpu/dispatch_tuner.py
+index 8beff1a..147c846 100644
+--- a/tuner/examples/dispatch_cpu/dispatch_tuner.py
++++ b/tuner/examples/dispatch_cpu/dispatch_tuner.py
+@@ -56,7 +56,7 @@ class DispatchTuner(libtuner.TuningClient):
+             "iree-benchmark-module",
+             f"--device={libtuner.DEVICE_ID_PLACEHOLDER}",
+             f"--module={compiled_vmfb_path.resolve()}",
+-            "--batch_size=25",
++            "--batch_size=5",
+             "--benchmark_repetitions=3",
+             "--benchmark_format=json",
+         ]
+-- 
+2.39.5 (Apple Git-154)
+
